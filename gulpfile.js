@@ -8,11 +8,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const htmlbeautify = require('gulp-html-beautify');
 
 gulp.task('html', function () {
-    gulp.src(['src/*.html'])
+    gulp.src(['./src/*.html'])
         .pipe(htmlPartial({
             basePath: 'src/partials/'
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./'));
 });
 
 
@@ -20,40 +20,42 @@ gulp.task('html', function () {
 gulp.task('serve', ['sass', 'html'], function() {
 
     browserSync.init({
-        server: "./dist"
+        server: {
+            baseDir: "./"
+        }
     });
 
-    gulp.watch("../src/sass/**/*.scss", ['sass']);
-    gulp.watch("./dist/*.html").on('change', browserSync.reload);
+    gulp.watch("/src/scss/**/*.scss", ['sass']);
+    gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src('./src/sass/**/*.scss')
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest("./dist/css"))
+        .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('prefix', function(){
-    return gulp.src('dist/css/**/*.css')
+    return gulp.src('./css/**/*.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('/css'))
 });
 
-gulp.task('css', function(){
-    return gulp.src('src/sass/vendor/**/*.css')
-        .pipe(gulp.dest('dist/css'))
-});
+//gulp.task('css', function(){
+//    return gulp.src('./vendor/**/*.css')
+//        .pipe(gulp.dest('./css'))
+//});
 
 gulp.task('html:watch', function(){
     gulp.watch('./src/**/*.html', ['html']);
 });
 gulp.task('sass:watch', function () {
-    gulp.watch('./src/sass/**/*.scss', ['sass']);
+    gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 
 gulp.task('js:watch', function () {
@@ -61,7 +63,7 @@ gulp.task('js:watch', function () {
 });
 gulp.task('js', function(){
     return gulp.src('./js/**/*.js')
-        .pipe(gulp.dest("./dist/js"))
+        .pipe(gulp.dest("./js"))
         .pipe(browserSync.stream());
 });
 
@@ -71,9 +73,9 @@ gulp.task('htmlbeautify', function() {
         indentSize: 4,
         preserve_newlines: false
     };
-    gulp.src('./dist/*.html')
+    gulp.src('./*.html')
         .pipe(htmlbeautify(options))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('./'))
 });
 
-gulp.task('default', ['serve','sass:watch','html:watch','js:watch','css','htmlbeautify']);
+gulp.task('default', ['serve','sass:watch','html:watch','js:watch','htmlbeautify']);

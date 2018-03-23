@@ -1,89 +1,66 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
     <title>Fixed top navbar example for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS
+        -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" type="text/css">
-    <link rel="stylesheet" href="../css/site.css" type="text/css"/>
-
-</head>
+    <link rel="stylesheet" href="./css/site.css" type="text/css" /> </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> <a class="navbar-brand" href="#">Fixed navbar</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Fixed navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-                <a class="nav-link" href="#section1">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#section2">about</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#section3">services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#section4">team</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#section5">contact</a>
-            </li>
-        </ul>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item "> <a class="nav-link" href="#section1">Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#section2">about</a> </li>
+                <li class="nav-item"> <a class="nav-link " href="#section3">services</a> </li>
+                <li class="nav-item"> <a class="nav-link " href="#section4">team</a> </li>
+                <li class="nav-item"> <a class="nav-link " href="#section5">contact</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <main id="section1" role="main">
+        <div class="">
+            <h1>Navbar example</h1>
+            <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p> <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>            <a class="btn btn-lg btn-brand" href="../../components/navbar/" role="button">View navbar docs &raquo;</a> </div>
+    </main>
+    <div id="section2" class="  container-fluid grey" style="padding-top:70px;padding-bottom:70px;height:500px;">
+        <h1>Section 2</h1>
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
     </div>
-</nav>
-
-<main  id="section1" role="main" class="">
-    <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p class="lead">This example is a hhhhghquick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
-        <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>
+    <div id="section3" class="container-fluid highlight" style="padding-top:70px;padding-bottom:70px;height:500px;">
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
     </div>
-</main>
-<div id="section2" class="  container-fluid grey" style="padding-top:70px;padding-bottom:70px;height:500px;">
-    <h1>Section 2</h1>
-    <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <div id="section4" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px;height:500px;">
+        <h1>Section 4 Submenu 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
     </div>
-
-</div>
-<div id="section3" class="container-fluid highlight" style="padding-top:70px;padding-bottom:70px;height:500px;">
-    <h1>Section 3</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section4" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px;height:500px;">
-    <h1>Section 4 Submenu 1</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section5" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px;height:500px;">
-    <h1>Section 4 Submenu 2</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-
-
-<footer>
-    <span>copyright 2018</span>
-</footer>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
+    <div id="section5" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px;height:500px;">
+        <h1>Section 4 Submenu 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    <footer> <span>copyright 2018</span> </footer>
+    <!-- Bootstrap core JavaScript==================================================-
+        ->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../js/site.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../js/site.js" type="text/javascript"></script>
 </body>
+
 </html>

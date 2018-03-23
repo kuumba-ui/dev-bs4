@@ -1,6 +1,6 @@
 
 {
-  "name": "bs",
+  "name": "dev-bs4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ash-h/bs4-starter.git"
+    "url": "git+https://github.com/kuumba-ui/dev-bs4.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ash-h/bs4-starter/issues"
+    "url": "https://github.com/kuumba-ui/dev-bs4/issues"
   },
-  "homepage": "https://github.com/ash-h/bs4-starter#readme",
+  "homepage": "https://github.com/kuumba-ui/dev-bs4#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
