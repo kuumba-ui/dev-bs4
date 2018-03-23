@@ -46,10 +46,10 @@ gulp.task('prefix', function(){
         .pipe(gulp.dest('/css'))
 });
 
-//gulp.task('css', function(){
-//    return gulp.src('./vendor/**/*.css')
-//        .pipe(gulp.dest('./css'))
-//});
+gulp.task('css', function(){
+    return gulp.src('./vendor/**/*.css')
+        .pipe(gulp.dest('./css'))
+});
 
 gulp.task('html:watch', function(){
     gulp.watch('./src/**/*.html', ['html']);
@@ -78,4 +78,4 @@ gulp.task('htmlbeautify', function() {
         .pipe(gulp.dest('./'))
 });
 
-gulp.task('default', ['serve','sass:watch','html:watch','js:watch','htmlbeautify']);
+gulp.task('default', ['serve','sass:watch','html:watch','css','js:watch','htmlbeautify']);
